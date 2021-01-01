@@ -62,6 +62,9 @@ nav ul li a {
     padding: 0px 0px 0px 50px;
 }
 
+.icon-box{
+  margin-left: auto;
+}
 a.arrow-button {
  
   
@@ -149,8 +152,8 @@ input[type=text]:focus {
 }
 .grid-list li a{
 	font-size: 12px;	
-	padding: 5px;
-	margin-left: 5px;
+	padding: 0px 11px 0px 0px;
+	margin: 0px 0px 0px 0px;
 }
 .filter-text{
 	padding: 10px;
