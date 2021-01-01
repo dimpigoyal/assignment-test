@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+body{
+    font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #212112;
+	/*background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');*/
+	/*background-position: center;
+	background-repeat: repeat;*/
+	background-size: 7%;
+	background-color: #f1f0f0;
+	overflow-x: hidden;
+    transition: all 200ms linear;
+}
+@charset "UTF-8";
+/* 
+$content-width will be the max width of the content within the navigation bar. 
+$breakpoint determines at which width the media query breakpoint will take effect.
+*/
+
+.banner{
+	background-image: url(dist/images/slide1.jpg);
+	
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    z-index: 1;
+
+  position: relative;
+  width: 100%;
+  height: 470px;
+ 
+}
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #ffffff;
+  color: #463f3f;
+  text-decoration: none;
+  /*
+  The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
+  */
+}
+.navbar-create-btn{margin: 16px 0px 6px 0px;border-radius: 20px;}
+.list-category{
+	
+	text-align: right!important;
+    padding: 0px 0px 0px 50px;
+}
+
+a.arrow-button {
+ 
+  
+  color: #333;
+  text-decoration: none;
+  
+  transition: all 0.2s;
+ 
+  border-radius: 8px;
+  &:hover {
+    color: #eee;
+    background-color: #333;
+  }
+}
+
+.arrow-right:before{
+ 
+    content: '\25c4' !important;
+    padding-right: 0.5em !important;
+  
+}
+/*.list-group-flush li:before, li:after {
+    border-right: 2px solid;
+    content: '';
+    display: block;
+    height: 8px;
+    margin-top: -6px;
+    position: absolute;
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    right: 10px;
+    top: 50%;
+    width: 0;
+}*/
+.fa-arrow-right{color: #dc3545;}
+.nav-list:hover .nav-dropdown {display: block;}
+.nav-list{
+	display: none;
+    background-color: #fff;
+    z-index: 9;
+    position: relative;
+}
+.banner-content{
+	color:#fff;
+	margin-top: 80px;
+	text-align: center;
+}
+.button-group{
+	text-align: center;
+}
+.button-group .btn{
+	width: 100px;
+}
+.rent-btn{
+	color:#000;
+	background-color: #fff;
+}
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+.banner-form{
+	    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 10px solid #635f5f;
+}
+.icon-input{
+	  padding: 6px;
+    border: 1px solid #d3d6d9;
+}
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+.grid-listimg{
+	margin-top: 30px;
+}
+.grid-list{
+	display: flex;
+	list-style-type:none;
+	    padding: 0px;
+}
+.grid-list li a{
+	font-size: 12px;	
+	padding: 5px;
+	margin-left: 5px;
+}
+.filter-text{
+	padding: 10px;
+	background-color: #fff;border-radius: 3px;
+}
+.filter-text select{
+  border:1px solid #f4faff; 	
+}
+.filter-text input[type=text]{
+  border:none;  		
+}
+.card1{
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+}
+.box-card{
+	background-color: #fff;
+}
+.box-card-title{
+	padding: 5px 0px 0px 5px !important;margin: 0px 5px 0px 5px !important;
+}
+.box-card-title-p{
+	    padding: 5px 0px 2px 5px !important;margin: 0px 5px 0px 5px !important;font-size: 14px;
+}
+.footer-box{background-color: #fff;padding: 0px 0px 10px 0px;margin: 0px 5px 5px 5px;
+}
+nav ul li a:hover {
+  background: #f2f2f2;
+  color: #fb5958;
+      text-decoration: none;
+}
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  z-index: 9;
+  /* Guarantees that the dropdown will display on top of any content. */
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  height: 70px;
+  width: 70px;
+}
+
+.card-panel {
+  /*box-shadow: rgba(0, 0, 0, 0.1) 0 5px 40px, rgba(0, 0, 0, 0.1) 0 5px 10px;*/
+  border-bottom: 10px solid transparent;
+  transition: box-shadow 0.25s;
+  padding: 10px;
+  margin: 0.1rem 0 1rem;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+/* Font Awesome Icons */
+
+.card-panel form .fa {
+  top: 13px;
+  right: 1rem;
+}
+
+.form-group a i {
+  font-family: FontAwesome;
+  margin: 0 auto;
+  font-size: 5rem;
+  font-style: normal;
+}
+
+.media-body{
+	padding: 7px;
+}
+.media-left{
+	    padding: 10px;
+}
+.house-type {
+    color: #dc3545;
+    padding: 5px 0px 0px 12px !important;
+    margin: 0px;
+    font-size: 10px;
+}
+.card-text i{
+    color: #dc3545;
+    padding: 0px;
+    margin: 0px;
+
+    font-size: 20px;
+}
+.sign-img{
+	border-radius: 50%;
+}
+.apartment-detail{
+	    padding: 0px 2px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    font-size: 12px;
+}
+.card-footer-name{font-size:14px;}
+.card-footer-year{font-size:14px;}
+.apartment-detail li {
+	    list-style-type: none;
+    display: inline;
+    padding: 12px;
+    margin: 0px;}
+.apartment-detail li a{
+	
+	display:inline;
+}
+.select-box{
+	padding: 0px 20px;
+  
+    margin: 0px 10px 0px 0px;
+
+  box-sizing: border-box;
+}
+.banner input[type=text] {
+ /* width: 100%;*/
+  padding: 12px 20px;
+  
+    margin: 0px 10px 0px 0px;
+
+  box-sizing: border-box;
+}
+.main-media-heading{    padding: 14px 1px 4px 10px;}
+.media-recently-price{  margin-bottom: 0rem;}
+.Recently-view-list{margin: 0px; padding: 0px;}
+.Recently-view-list li{
+	list-style-type: none;
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+    font-size: 13px;
+}
+footer {background-color: #242b54; color:#a5a0a0;; padding: 100px 0px 0px 0px;}
+         .footer-menu li a{color:#a5a0a0;;}
+         .footer-main-menu{text-transform: capitalize;font-size: 20px; color:#fff;}
+         .social-list li a{float:left;     border-radius: 50%;text-align: center; padding: 10px;}
+        
+         .fa-facebook { color:#a5a0a0;}
+         .fa-twitter { color:#a5a0a0;}
+         .fa-google { color:#a5a0a0;}
+         .fa-linkedin { color:#a5a0a0;}
+  		 .bottom-footer{   background-color: #171e46; color:#a5a0a0;;}
+  		 .footer-men-bottom{ padding: 22px 0px 0px 0px;}
+  		 .footer-men-bottom li{display: inline; color: #fff;}
+  		 .footer-men-bottom li a{    color: #a5a0a0;
+    text-decoration: none;
+    padding: 7px 30px 8px 0px;}
+/* Media Queries */
+
+@media (min-width: 768px) {
+  .min-container {
+    max-width: 650px;
+  }
+}
+
+.min-container {
+  margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #463f3f;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
+  
+}
+/* 
+.navigation – the outer wrapper for the navbar. Specifies the height and color, and will stretch the full width of the viewport.
+*/
+.navigation {
+  height: 70px;
+  background: #ffffff;
+}
+
+/*
+.nav-container – the inner wrapper for the navbar. Defines how far the actual content should stretch.
+*/
+.page-counter{text-align: center; padding: 0px 0px 20px 0px;}
+.p-next {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+      margin: 0px 0px 0px 2px;
+}
+.previous {
+      background-color: #fff;
+    color: #000;
+}
+.page-counter .active{
+	background-color: #bd2130;
+	color: #fff;
+}
+.next {
+  background-color: #242b54;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+.fa-home{color:#bd2130;}
+.nav-container {
+ 
+  margin: 0 auto;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #463f3f;
+  text-decoration: none;
+}
+.banner-form {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.banner-form label {
+  margin: 5px 10px 5px 0;
+}
+
+.banner-form input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.banner-form select {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.banner-form button {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  border: 1px solid #dc3545;
+  color: white;
+  cursor: pointer;
+}
+
+.banner-form button:hover {
+  background-color: royalblue;
+}
+
+@media (max-width: 800px) {
+  .banner-form input {
+    margin: 10px 0;
+  }
+  
+  .banner-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+@media (max-width: 768px){
+	.banner-form {
+    
+    visibility: hidden;
+    
+}
+
+}
+@media only screen and (max-width: 600px) {
+  
+}
+@media only screen and (max-width: 700px){
+	.banner{
+	
+  position: relative;
+  width: 100%;
+  height: 160px;
+ 
+}
+.banner-content {
+    
+    margin-top: 10px;
+   
+}
+.banner-content p{
+	font-size: 0.75rem;
+}
+.button-group .btn {
+    width: 50px;
+    font-size: 10px;
+}
+.h3, h3 {
+    font-size: 0.75rem;
+}
+}
+@media (max-width: 450px){
+	.banner-form {
+    
+    visibility: hidden;
+    
+}
+.h3, h3 {
+    font-size: 0.75rem;
+}
+
+}
